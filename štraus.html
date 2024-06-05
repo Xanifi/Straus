@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video a Zvuk</title>
+    <style>
+        /* Tvoj štýl CSS zostáva rovnaký */
+        .section img {
+            width: 300px; /* Nastav požadovanú šírku */
+            height: auto; /* Zachovať pomer strán */
+            display: block;
+            margin: 0 auto 20px auto; /* Center obrázky a pridať margin */
+        }
+
+        /* Tento štýl je pre navigačné odkazy */
+        nav {
+            background-color: #4A4A4A;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Nový štýl pre zarovnanie textu na stred */
+        .section {
+            text-align: center;
+        }
+
+        /* Štýl pre zarovnanie podsekcii */
+        .subsection {
+            text-align: center; /* Podsekcii chceme zarovnať doľava */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="image.png" alt="Logo Fakulty">
+    </div>
+
+    <div class="description">
+        <h1>Študijný program: Hospodárska informatika (Jednoodborové štúdium, Bakalársky I. st., denná forma)</h1>
+        <h2>Študijný odbor: Hospodárska informatika</h2>
+        <h3>Predmet: informatika II.  Ing. Jozef Kultan, PhD.</h3>
+    </div>
+
+    <!-- Navigačné odkazy -->
+    <nav>
+        <a href="javascript:showSection('uvod')">Úvod</a>
+        <a href="javascript:showSection('softver')">Video</a>
+        <a href="javascript:showSection('digitalne')">Digitálne video</a>
+        <a href="javascript:showSection('analogove')">Analogové video</a>
+        <a href="javascript:showSection('sposoby')">Spôsoby kompresie videa</a>
+        <a href="javascript:showSection('zvuk')">Zvuk</a>
+        <a href="javascript:showSection('frekvencia')">Frekvencia</a>
+        <a href="javascript:showSection('rychlost')">Rýchlosť zvuku</a>
+        <a href="javascript:showSection('kompzvuku')">Kompresia zvuku</a>
+    </nav>
+
+    <!-- Obsah pre jednotlivé sekcie -->
+    <div id="uvod" class="section">
+        <img src="uvod.png" alt="Úvodný obrázok">
+        <p>Informatika je interdisciplinárny odbor, ktorý sa zaoberá štúdiom informácií a výpočtov. Zahrňuje širokú škálu tém od teórie algoritmov a analýzy dát, cez vývoj softvéru a počítačových systémov, až po umelú inteligenciu a kybernetickú bezpečnosť.</p>
+        <p>Informatika má veľký význam v modernom svete, pretože počítačové technológie sú neoddeliteľnou súčasťou nášho každodenného života. Počítače a softvér ovplyvňujú prakticky všetky oblasti, od zdravotníctva a vzdelávania, cez priemysel a obchod, až po zábavu a komunikáciu.</p>
+        <p>V rámci štúdia informatiky sa študenti oboznamujú s rôznymi programovacími jazykmi, databázovými systémami, sieťovými technológiami a mnohými ďalšími oblasťami. Získavajú zručnosti, ktoré im umožňujú riešiť komplexné problémy, navrhovať a implementovať efektívne riešenia a prispievať k technologickému pokroku.</p>
+    </div>
+
+    <div id="softver" class="section">
+        <img src="video.png" alt="Obrázok videotechniky">
+        <p>Videotechnika alebo video je technika na zachytávanie, záznam, prehrávanie, prenos a obnovu pohyblivých obrázkov používajúca elektronické signály alebo digitálne médiá. Spája sa predovšetkým s televíznou výrobou.</p>
+        <div class="subsection">
+            <h3>Softvér pre prácu s videom</h3>
+            <p>Existuje mnoho softvérových nástrojov pre digitálne video, ktoré umožňujú editovať, konvertovať a spracovávať videá. Medzi najpopulárnejšie patria Adobe Premiere, Final Cut Pro, DaVinci Resolve a Sony Vegas. Tieto programy poskytujú širokú škálu nástrojov na úpravu videa, vrátane strihania, pridávania efektov, farieb a zvuku.</p>
+        </div>
+    </div>
+
+    <div id="analogove" class="section">
+        <img src="digitalne.png" alt="Obrázok analogového videa">
+        <p>Analogové video je forma záznamu, ktorá používa analogové signály na zaznamenávanie a prehrávanie obrazu. Tento formát bol štandardom pred vznikom digitálneho videa a stále sa v niektorých aplikáciách používa.</p>
+        <div class="subsection">
+            <h3>Princíp fungovania analogového videa</h3>
+            <p>V analógovom videu je obraz zaznamenaný ako spojitý signál, ktorý reprezentuje intenzitu farby a jasu v každom okamihu času. Tento signál sa potom prenáša na záznamové médium, ako je magnetická páska alebo VHS kazeta, a neskôr sa môže prehrávať pomocou analógových zariadení, ako sú televízory alebo VCR prehrávače.</p>
+            <h3>Výhody a nevýhody analógového videa</h3>
+            <p>Výhody:</p>
+            <p>1. Jednoduchosť technológie a zariadení.<br>
+            2. Stabilita a odolnosť voči niektorým druhom interferencií.</p>
+            <p>Nevýhody:</p>
+            <p>1. Nižšia kvalita obrazu v porovnaní s digitálnym videom.<br>
+            2. Náchylnosť na šum a rušenie.<br>
+            3. Straty kvality pri kopírovaní a prenose signálu.</p>
+        </div>
+    </div>
+
+    <div id="sposoby" class="section">
+        <img src="kompresia.png" alt="Obrázok kompresie videa">
+        <p>Spôsoby kompresie sú techniky používané na zmenšenie veľkosti videa alebo zvuku bez výrazného poklesu kvality. Tieto techniky sú dôležité pri prenose a ukladaní digitálnych médií.</p>
+        <div class="subsection">
+            <h3>Typy kompresie</h3>
+            <p>Existujú rôzne spôsoby kompresie pre video aj zvuk. Pre video sa často používajú štandardy ako H.264 alebo H.265, ktoré používajú rôzne techniky na redukciu redundancie informácií a optimalizáciu prenášaného dátového toku. Kompresia videa sa vykonáva prostredníctvom video kodeku, ktorý pracuje na jednom alebo viacerých kompresných algoritmoch. Kompresia videa sa zvyčajne vykonáva odstránením opakujúcich sa obrázkov, zvukov a / alebo scén z videa. Napríklad video môže mať rovnaké pozadie, obrázok alebo zvuk niekoľkokrát prehraté alebo údaje zobrazené / pripojené k video súboru nie sú také dôležité. Kompresia videa odstráni všetky takéto údaje, aby sa zmenšila veľkosť video súboru.</p>
+        </div>
+    </div>
+
+    <div id="digitalne" class="section">
+        <img src="analog.png" alt="Obrázok digitálneho videa">
+        <p>Digitálne video je formát záznamu a prehrávania obrazu, ktorý používa digitálne signály. Tento formát ponúka vyššiu kvalitu obrazu a je menej náchylný na rušenie a straty kvality pri prenose alebo kopírovaní.Ide vlastne o postupné zobrazovanie snímkov, ich počet za sekundu (keď sa zjaví pred ľudským okom nejaký obrázok, trvá niekoľko milisekúnd, kým si ho stačíme uvedomiť. Ak sa sekvencia obrázkov vykresľuje rýchlo za sebou, oko nedokáže vidieť každý obrázok individuálne – túto skutočnosť využívajú všetky videosystémy), rozlíšenie a požadovaný dátový tok, ktorý sa mení v závislosti na norme a formáte (komprimácii). Snímky  sú poskladané z pixlov v dvojrozmernom poli, kde každý pixel reprezentuje úroveň intenzity alebo farby. Pri čierno-bielom obrázku nám pre každý pixel stačí 1 bit (1 bit = 2 farby). Gray-scale obrázky (odtiene 256 farieb šedej) potrebujú 8 bitov na pixel. Truecolor obrázky potrebujú 8 bitov na reprezentáciu z každej farby RGB modelu, tj. spolu 24 bitov na pixel. Najväčším problémom digitálneho videa sú teda jeho kapacitné nároky – 1 sekunda „čistého“ videa v plnom rozlíšení normy PAL (predpokladáme že všetky body a farby sú na TV zobrazované ) - dostaneme 720x576 bodov s 25 snímkami za sekundu x 24 bitové farby,  teda máme asi 40 MB na sekundu videa, tj. 210 GB pre 1,5 hodinový film.</p>
+    </div>
+
+    <div id="zvuk" class="section">
+        <img src="zvuk.png" alt="Obrázok zvuku">
+        <p>Zvuk je forma energie, ktorá vzniká kmitaním telies, napríklad chvením hlasiviek alebo blany bubna. Keď sa zvuk šíri nejakým prostredím, napríklad vzduchom, jeho molekuly kmitajú a navzájom sa zrážajú, čím si odovzdávajú energiu. Vo vákuu sa zvuk nešíri. V informatike sa zvuk často digitalizuje a spracováva pre rôzne aplikácie, vrátane hudby, filmov a telekomunikácií.</p>
+    </div>
+
+    <div id="frekvencia" class="section">
+        <img src="frekvencia.png" alt="Obrázok frekvencie">
+        <p>Výška tónu závisí od jeho frekvencie. Frekvencia sa meria v hertzoch (Hz); 1 Hz je jeden kmit za sekundu. Najnižší zvuk, ktorý väčšina ľudí dokáže zachytiť má frekvenciu okolo 40 Hz, najvyšší má frekvenciu okolo 20 000 Hz. Bežná muzika sa pohybuje okolo 11 500 Hz.</p>
+    </div>
+
+    <div id="rychlost" class="section">
+        <img src="rychlost.png" alt="Obrázok rýchlosti zvuku">
+        <p>Rýchlosť zvuku je fyzikálna vlastnosť, ktorá určuje, ako rýchlo sa zvuk šíri určitým prostredím. Táto vlastnosť má významné uplatnenie v rôznych odvetviach, vrátane akustiky, komunikácií a vedy o zvuku.</p>
+        <div class="subsection">
+            <h3>Fyzikálne aspekty rýchlosti zvuku</h3>
+            <p>Rýchlosť zvuku závisí od vlastností prostredia, cez ktoré sa šíri, ako aj od teploty a vlhkosti vzduchu. Zvuk sa šíri vo vzduchu rýchlosťou 330 m/s. Je to oveľa menej ako rýchlosť svetla, preto počas búrky vidno najskôr blesk a zahrmenie počuť neskôr. Podľa času, ktorý uplynie medzi zábleskom a zahrmením, možno určiť vzdialenosť búrky: je to asi 1 km na každé 3 namerané sekundy.</p>
+        </div>
+    </div>
+
+    <div id="kompzvuku" class="section">
+        <img src="strih.png" alt="Obrázok kompresie zvuku">
+        <p>Kompresia zvuku je proces znižovania veľkosti zvukového súboru odstránením nadbytočných dát. Tento proces umožňuje efektívnejšie ukladanie a prenos zvuku bez výrazného zníženia jeho kvality.</p>
+        <h3>Programy na kompresiu zvuku</h3>
+        <p>1. Audacity<br>
+        2. Adobe Audition<br>
+        3. FL Studio<br>
+        4. Reaper<br>
+        5. Wavepad</p>
+    </div>
+<footer style="background-color: #4A4A4A; color: white; text-align: right; padding: 10px;">
+        <p style="margin: 0;">Adrián Štraus</p>
+    </footer>
+    <!-- JavaScript pre skrytie/ukázanie sekcií -->
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
